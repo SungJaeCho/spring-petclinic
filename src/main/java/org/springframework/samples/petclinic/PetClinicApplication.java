@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * PetClinic Spring Boot Application.
@@ -27,6 +28,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class PetClinicApplication {
+
+	// bean이라는 메서드를 정의할때는 @Configuration이라는 어노테이션 하위에서 작성을 해야한다.
+	// @SpriingBootApplication의 경우 @Configuration을 가지고있다.
+	@Bean
+	public String sungjae() {
+		return "sungjae";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(PetClinicApplication.class, args);

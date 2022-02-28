@@ -11,8 +11,12 @@ public class SampleController {
 	@Autowired
 	ApplicationContext applicationContext;
 
+	@Autowired
+	String sungjae;
+
 	@GetMapping("/context")
 	public String context() {
-		return "hello" + applicationContext.getBean(OwnerRepository.class);
+//		return "hello " + applicationContext.getBean(OwnerRepository.class);
+		return "hello " + sungjae;
 	}
 }
